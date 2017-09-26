@@ -1,0 +1,20 @@
+<div class="container top-30">
+  <div class="row">
+
+    <div class="col-md-3">
+
+      <input type="text" (keyup)="buscarArtista()" name="criteria" class="form-control" [(ngModel)]="criteria" placeholder="Buscar por artista...">
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-3 text-center" *ngFor="let item of artistResult">
+          <img class="img-fluid img-thumbnail" [src]="item.images | filtroFoto" alt="">
+          <p>{{item.name}}</p>
+          <hr>
+        </div>          
+      </div>
+    </div>
+
+  </div>
+</div>
